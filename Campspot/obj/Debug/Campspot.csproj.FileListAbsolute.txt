@@ -1,8 +1,0 @@
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\bin\Debug\Campspot.exe.config
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\bin\Debug\Campspot.exe
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\bin\Debug\Campspot.pdb
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\bin\Debug\Newtonsoft.Json.dll
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\bin\Debug\Newtonsoft.Json.xml
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\obj\Debug\Campspot.csprojResolveAssemblyReference.cache
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\obj\Debug\Campspot.exe
-C:\Users\cpeters-qa\Documents\GitHub\campspot\Campspot\obj\Debug\Campspot.pdb
