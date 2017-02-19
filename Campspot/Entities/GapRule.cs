@@ -1,6 +1,8 @@
-﻿namespace Campspot
+﻿using Campspot.Repositories;
+
+namespace Campspot
 {
-    internal class GapRule
+    public class GapRule
     {
         public int GapSize { get; set; }
     }

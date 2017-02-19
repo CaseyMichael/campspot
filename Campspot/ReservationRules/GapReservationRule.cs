@@ -5,11 +5,11 @@ using Campspot.Repositories;
 namespace Campspot.ReservationRules
 {
 
-    internal class GapRule : ReservationRuleBase
+    internal class GapReservationRule : ReservationRuleBase
     {
-        private readonly GapRuleRepository _gapRuleRepository;
+        private readonly IGapRuleRepository _gapRuleRepository;
 
-        public GapRule(GapRuleRepository gapRuleRepository)
+        public GapReservationRule(IGapRuleRepository gapRuleRepository)
         {
             _gapRuleRepository = gapRuleRepository;
         }

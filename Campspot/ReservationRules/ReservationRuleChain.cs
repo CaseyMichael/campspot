@@ -8,7 +8,7 @@ namespace Campspot.ReservationRules
         public ReservationRuleChain(GapRuleRepository gapRuleRepository)
         {
             ConcurrencyRule concurrencyRule = new ConcurrencyRule();
-            GapRule gapRule = new GapRule(gapRuleRepository);
+            GapReservationRule gapRule = new GapReservationRule(gapRuleRepository);
             DefaultRule defaultRule = new DefaultRule();
 
             concurrencyRule.SetSuccessor(gapRule);

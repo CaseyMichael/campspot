@@ -3,7 +3,7 @@ using System;
 
 namespace Campspot
 {
-    internal class Reservation
+    public class Reservation
     {
         public int CampsiteId { get; set; }
         public DateTime StartDate { get; set; }

@@ -3,7 +3,12 @@ using System.Linq;
 
 namespace Campspot.Repositories
 {
-    internal class GapRuleRepository
+    public interface IGapRuleRepository
+    {
+        IEnumerable<GapRule> GetGapRules();
+    }
+
+    internal class GapRuleRepository : IGapRuleRepository
     {
         private readonly ImportTestCases _importTestCases;
         private IEnumerable<GapRule> _cacheGapRules;

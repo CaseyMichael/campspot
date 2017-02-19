@@ -63,7 +63,7 @@
     <Compile Include="ReservationEngineFactory.cs" />
     <Compile Include="ReservationRules\ConcurrencyRule.cs" />
     <Compile Include="ReservationRules\DefaultRule.cs" />
-    <Compile Include="ReservationRules\GapRule.cs" />
+    <Compile Include="ReservationRules\GapReservationRule.cs" />
     <Compile Include="ReservationRules\ReservationRuleBase.cs" />
     <Compile Include="ReservationRules\ReservationRuleChain.cs" />
   </ItemGroup>
