@@ -28,7 +28,7 @@ namespace Campspot
 
             ImportTestCases importTestCases = new ImportTestCases(filePath);
             SearchQueryRepository searchQueryRepository = new SearchQueryRepository(importTestCases);
-            ReservationEngine engine = ReservationEngineFactory.Create(filePath);
+            IReservationEngine engine = ReservationEngineFactory.Create(filePath);
             var availableCampsites = engine.GetAvailableCampsitesForSearchQuery(searchQueryRepository.GetSearchQuery());
             foreach (var campsite in availableCampsites)
             {
