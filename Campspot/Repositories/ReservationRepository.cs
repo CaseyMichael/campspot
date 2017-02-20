@@ -4,7 +4,12 @@ using System.Linq;
 
 namespace Campspot.Repositories
 {
-    internal class ReservationRepository
+    public interface IReservationRepository
+    {
+        IEnumerable<Reservation> GetReservations();
+    }
+
+    internal class ReservationRepository : IReservationRepository
     {
         private readonly ImportTestCases _importTestCases;
         private IEnumerable<Reservation> _cacheReservations;

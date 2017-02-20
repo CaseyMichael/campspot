@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Campspot.Repositories;
 
 namespace Campspot.ReservationRules
 {
-    abstract class ReservationRuleBase
+    public abstract class ReservationRuleBase
     {
         protected ReservationRuleBase Successor;
 

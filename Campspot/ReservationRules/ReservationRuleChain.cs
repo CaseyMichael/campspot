@@ -2,7 +2,12 @@
 
 namespace Campspot.ReservationRules
 {
-    internal class ReservationRuleChain
+    public interface IReservationRuleChain
+    {
+        ReservationRuleBase GetStartOfChain();
+    }
+
+    internal class ReservationRuleChain : IReservationRuleChain
     {
         private readonly ReservationRuleBase _startOfChain;
         public ReservationRuleChain(GapRuleRepository gapRuleRepository)

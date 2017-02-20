@@ -5,14 +5,19 @@ using Campspot.ReservationRules;
 
 namespace Campspot
 {
-    internal class ReservationEngine
+    public interface IReservationEngine
     {
-        private readonly ReservationRepository _reservationRepository;
-        private readonly CampsiteRepository _campsiteRepository;
-        private readonly ReservationRuleChain _reservationRuleChain;
+        IEnumerable<Campsite> GetAvailableCampsitesForSearchQuery(SearchQuery searchQuery);
+    }
 
-        public ReservationEngine(ReservationRepository reservationRepository, CampsiteRepository campsiteRepository, 
-            ReservationRuleChain reservationRuleChain)
+    internal class ReservationEngine : IReservationEngine
+    {
+        private readonly IReservationRepository _reservationRepository;
+        private readonly ICampsiteRepository _campsiteRepository;
+        private readonly IReservationRuleChain _reservationRuleChain;
+
+        public ReservationEngine(IReservationRepository reservationRepository, ICampsiteRepository campsiteRepository, 
+            IReservationRuleChain reservationRuleChain)
         {
             _reservationRepository = reservationRepository;
             _campsiteRepository = campsiteRepository;

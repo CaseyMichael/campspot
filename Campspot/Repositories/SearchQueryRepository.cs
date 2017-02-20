@@ -2,10 +2,15 @@
 
 namespace Campspot.Repositories
 {
-    class SearchQueryRepository
+    public interface ISearchQueryRepository
     {
-        private SearchQuery _cacheSearchQuery;
+        SearchQuery GetSearchQuery();
+    }
+
+    internal class SearchQueryRepository : ISearchQueryRepository
+    {
         private readonly ImportTestCases _importTestCases;
+        private SearchQuery _cacheSearchQuery;
         
         public SearchQueryRepository(ImportTestCases importTestCases)
         {

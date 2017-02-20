@@ -16,19 +16,19 @@ namespace Campspot.Test
             var data = test.GetJsonDataIntoObject();
             Assert.IsNotNull(data);
 
-            ReservationRepository repo = new ReservationRepository(test);
+            IReservationRepository repo = new ReservationRepository(test);
             var reservations = repo.GetReservations();
             Assert.IsNotNull(reservations);
 
-            CampsiteRepository campsiteRepository = new CampsiteRepository(test);
+            ICampsiteRepository campsiteRepository = new CampsiteRepository(test);
             var campsites = campsiteRepository.GetCampsites();
             Assert.IsNotNull(campsites);
 
-            SearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
+            ISearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
             var searchQuery = searchQueryRepository.GetSearchQuery();
             Assert.IsNotNull(searchQuery);
 
-            GapRuleRepository gapRuleRepository = new GapRuleRepository(test);
+            IGapRuleRepository gapRuleRepository = new GapRuleRepository(test);
             var gapRules = gapRuleRepository.GetGapRules();
             Assert.IsNotNull(gapRules);
         }
@@ -38,8 +38,8 @@ namespace Campspot.Test
         {
             var filePath = @"..\..\..\test-case.json";
             ImportTestCases test = new ImportTestCases(filePath);
-            SearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
-            ReservationEngine engine = ReservationEngineFactory.Create(filePath);
+            ISearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
+            IReservationEngine engine = ReservationEngineFactory.Create(filePath);
 
             var data = engine.GetAvailableCampsitesForSearchQuery(searchQueryRepository.GetSearchQuery()).ToList();
 
@@ -59,8 +59,8 @@ namespace Campspot.Test
         {
             var filePath = @"..\..\..\test-case2.json";
             ImportTestCases test = new ImportTestCases(filePath);
-            SearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
-            ReservationEngine engine = ReservationEngineFactory.Create(filePath);
+            ISearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
+            IReservationEngine engine = ReservationEngineFactory.Create(filePath);
 
             var data = engine.GetAvailableCampsitesForSearchQuery(searchQueryRepository.GetSearchQuery()).ToList();
 
@@ -80,8 +80,8 @@ namespace Campspot.Test
         {
             var filePath = @"..\..\..\test-case3.json";
             ImportTestCases test = new ImportTestCases(filePath);
-            SearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
-            ReservationEngine engine = ReservationEngineFactory.Create(filePath);
+            ISearchQueryRepository searchQueryRepository = new SearchQueryRepository(test);
+            IReservationEngine engine = ReservationEngineFactory.Create(filePath);
 
             var data = engine.GetAvailableCampsitesForSearchQuery(searchQueryRepository.GetSearchQuery()).ToList();
 

@@ -12,6 +12,7 @@ namespace Campspot.Repositories
     {
         private readonly ImportTestCases _importTestCases;
         private IEnumerable<GapRule> _cacheGapRules;
+
         public GapRuleRepository(ImportTestCases importTestCases)
         {
             _importTestCases = importTestCases;
