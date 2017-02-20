@@ -11,7 +11,7 @@
 
 ## How to Run Program ##
 After building the application you can debug the application using Visual Studio Community by pressing `f5`. 
-You can also open a command prompt and navigate to the executable folder "Campspot\bin\Debug" and run `Campspot.exe "filepath"` passing in the full filepath of your test-case.json file.
+You can also open a command prompt and navigate to the executable folder "Campspot\bin\Debug" and run `Campspot.exe "filepath"` passing in the full or relative filepath of your test-case.json file.
 
 ## How to Execute Tests ##
 You can execute the unit tests by going to the file menu "Test > Windows > Text Explorer" then clicking "Run All"
