@@ -11,7 +11,7 @@
 
 ## How to Run Program ##
 After building the application you can debug the application using Visual Studio Community by pressing `f5`. 
-You can also open a command prompt and navigate to the executable folder "Campspot\bin\Debug" and run `Campspot.exe "filepath"` passing in the file location of your test cases.
+You can also open a command prompt and navigate to the executable folder "Campspot\bin\Debug" and run `Campspot.exe "filepath"` passing in the full filepath of your test-case.json file.
 
 ## How to Execute Tests ##
 You can execute the unit tests by going to the file menu "Test > Windows > Text Explorer" then clicking "Run All"
@@ -19,7 +19,7 @@ You can execute the unit tests by going to the file menu "Test > Windows > Text 
 
 ### High Level Description of approach ###
 1. Get the test-case.json data into C# objects
-	a. Direct mapping to a RootObject
+	a. Direct mapping to a RootObject to match the json format.
 	b. Break a part the RootObject into separate classes for easier manipulation.
 2. Break a part the logic into separate rules that can be applied in order and expanded upon.
 	a. A campsite is not available if a previous reservation overlaps with the search query.
